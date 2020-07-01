@@ -1,36 +1,12 @@
-
-
-
 <div class="contaimer">
   <div class="row">
     <div class="col-lg-6 landing-left">
-      <div class="dummy">
-        <div class="screen-shot">
-          <div class="carousel carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <%= image_tag "shot1.jpg", height: '427', width: '240' %>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag "shot2.jpg", height: '427', width: '240' %>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag "shot1.jpg", height: '427', width: '240' %>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag "shot2.jpg", height: '427', width: '240' %>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag "shot1.jpg", height: '427', width: '240' %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <%= render 'devise/shared/dummy_phone' %>
     </div>
     <div class="col-lg-6 landing-right text-center d-flex align-items-center">
-      <div class="form-login box">
-        <h3 class="core-sprite logo-img"><i class="fas fa-caravan"></i><i class="fas fa-shuttle-van"></i></h3>
+      <div>
+        <div class="form-login box">
+          <h3 class="core-sprite logo-img"><i class="fas fa-caravan"></i><i class="fas fa-shuttle-van"></i></h3>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-group">
@@ -47,14 +23,16 @@
               <%= f.label :remember_me, class: "form-check-label" %>
             </div>
           <% end %>
-
+            <br>
           <div class="actions">
             <%= f.submit "Log in", class: "button" %>
           </div>
           <br>
         <% end %>
-
-        <!-- <%#= render "devise/shared/links" %> -->
+      </div>
+        <div class="redirect-link box">
+          <%= render "devise/shared/links" %>
+        </div>
       </div>
     </div>
   </div>
