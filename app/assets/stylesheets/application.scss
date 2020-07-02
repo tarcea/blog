@@ -147,3 +147,22 @@ footer .nav-item {
   font-size: 14px;
 }
 
+.edit-profile-btn {
+  margin: 5px 0 0 15px;
+  font-weight: bold;
+
+}
+
+.setting {
+  margin: 7px 0 0 10px;
+  background-color: transparent;
+  background-position: -125px -355px;
+  height: 24px;
+  width: 24px;
+  border: none;
+}
+
+.setting:hover {
+  cursor: pointer;
+}
+
