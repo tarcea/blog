@@ -275,6 +275,7 @@ Devise.setup do |config|
   google_client_id = Rails.application.credentials.google_oauth2[:client_id]
   google_client_secret = Rails.application.credentials.google_oauth2[:client_secret]
   config.omniauth :google_oauth2, google_client_id, google_client_secret, scope: 'userinfo.email,userinfo.profile', skip_jwt: true
+  config.omniauth :facebook, '675808116334650', '925f7a3f4a995d5498d264d45ea969c6'
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

@@ -1,5 +1,5 @@
 @import 'bootstrap/scss/bootstrap';
-@import 'skeleton';
+// @import 'skeleton';
 
 body {
   background-color: #fafafa;
@@ -97,10 +97,15 @@ footer .nav-item {
   color: #999;
 }
 
+.carousel-item {
+
+}
+
 .carousel-fade {
   .carousel-item.active {
     opacity: 1;
     display: block;
+
   }
   .carousel-item {
     transition: opacity 0.9s ease-in-out;
@@ -114,3 +119,31 @@ footer .nav-item {
     top: 0px;
   }
 }
+.avatar {
+  border-radius: 50%;
+}
+
+.profile-wrapper {
+  padding: 60px 0;
+  border-bottom: 1px solid #efefef;
+
+  .username {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 200;
+  }
+
+  .email {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.common-btn {
+  height: 28px;
+  line-height: 24px;
+  padding: 0 24px;
+  border-color: #dbdbdb;
+  font-size: 14px;
+}
+
