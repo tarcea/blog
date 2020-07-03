@@ -1,14 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <%= link_to root_path, class: "navbar-brand logo" do %>
-            <i class="fas fa-caravan"></i><i class="fas fa-shuttle-van"></i>
+            <!-- <i class="fas fa-photo-video"></i> -->
+            <%= image_tag "ecarta4.jpg", height: '75', width: '250' %>
         <% end %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <form class="form-inline my-2 my-lg-0 ml-md-auto">
-            <input class="form-control mr-sm-2 text-center" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control mr-sm-2 text-center common-btn" type="search" placeholder="Search" aria-label="Search">
 
           </form>
           <ul class="navbar-nav ml-md-auto">
@@ -20,7 +21,9 @@
                 <a class="nav-link icon" href="#"><i class="far fa-heart"></i></a>
               </li>
               <li class="nav-item four columns">
-                <a class="nav-link icon" href="#"><i class="far fa-user"></i></a>
+                <%= link_to user_path(current_user), class: "nav-link icon core-sprite" do %>
+                   <i class="far fa-user"></i>
+                <% end %>
               </li>
             </div>
           </ul>

@@ -1,17 +1,16 @@
 <div class="row justify-content-md-center profile-wrapper">
   <div class="col-md-4 text-center">
-    <% unless @user.image.nil? %>
-      <%= image_tag (@user.image + "?type=large"), width: '150', height: '150', class: 'avatar' %>
-    <% end %>
+      <%= image_tag avatar_url(@user), width: '150', height: '150', class: 'avatar' %>
   </div>
   <div class="col-md-8">
     <div class="row">
       <p class="username"><%= @user.name %></p>
-      <button class="btn btn-outline-dark common-btn edit-profile-btn">Edit Profile</button>
-      <button type="button" class="core-sprite setting" data-toggle="modal" data-target="#exampleModal">
-        <i class="fas fa-cogs"></i>
-      </button>
-
+      <% if @user == current_user %>
+        <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-outline-dark common-btn edit-profile-btn" %>
+        <button type="button" class="core-sprite setting" data-toggle="modal" data-target="#exampleModal">
+          <i class="fas fa-cogs"></i>
+        </button>
+      <% end %>
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
